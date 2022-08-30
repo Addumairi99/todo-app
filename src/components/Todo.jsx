@@ -6,14 +6,17 @@ import Header from "./Header";
 import BtnFilter from "./BtnFilter";
 import BtnAddTask from "./BtnAddTask";
 import axios from "axios";
-const port = process.env.port;
+const port = process.env.REACT_APP_PORT;
 
 const api = "http://localhost:5000/tasks";
+// const devEnv = process.env.NODE_ENV !== "production";
+// const {REACT_APP_DEV_URL,REACT_APP_PROD_URL} = process.env
 function Todo() {
   const [items, setItems] = useState([]);
   const [addTodo, setAddTodo] = useState("");
   const toast = useToast();
   console.log(port)
+  // console.log(devEnv)
 
   useEffect(() => {
     axios.get(api).then((res) => {
