@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "task": "Belajar HTML",
+      "status": "Complate",
+      "description": "1 minggu",
+      "id": 1
+    },
+    {
+      "task": "Belajar CSS",
+      "status": "Complate",
+      "description": "2 minggu",
+      "id": 2
+    },
+    {
+      "task": "Belajar React Js",
+      "status": "Complate",
+      "description": "2 minggu",
+      "id": 3
+    },
+    {
+      "task": "Belajar NodeJs",
+      "status": "Complate",
+      "description": "2 Minggu",
+      "id": 4
+    },
+    {
+      "task": "Belajar MySQL",
+      "status": "Complate",
+      "description": "2 Minggu",
+      "id": 5
+    }
+  ]
+}
