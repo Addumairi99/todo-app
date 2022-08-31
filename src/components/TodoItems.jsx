@@ -10,7 +10,7 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
+
   Input,
   Stack,
   Box,
@@ -156,7 +156,7 @@ function TodoItems(props) {
           <Drawer isOpen={editModal} placement="right">
             <DrawerOverlay />
             <DrawerContent>
-              <DrawerCloseButton onClick={() => seEditModal(false)} />
+              {/* <DrawerCloseButton onClick={() => seEditModal(false)} /> */}
               <DrawerHeader>Edit Task {props.items.id}</DrawerHeader>
 
               <DrawerBody>
