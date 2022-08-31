@@ -20,7 +20,6 @@ function Todo() {
 
   useEffect(() => {
     axios.get(api).then((res) => {
-      // console.log(res.data);
       setItems(res.data);
     });
   }, [addTodo]);
