@@ -27,7 +27,7 @@ function BtnAddTask({ setAddTodo }) {
   const [description, setDescription] = useState("");
 
   console.log(task);
-  const url = "http://localhost:5000/tasks";
+  const url = "https://fake-api-to.herokuapp.com/tasks";
 
  
 

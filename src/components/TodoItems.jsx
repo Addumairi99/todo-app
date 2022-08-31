@@ -40,7 +40,7 @@ function TodoItems(props) {
   const [editDescription, seEditDescription] = useState(
     props.items.description
   );
-  const api = "http://localhost:5000/tasks";
+  const api = "https://fake-api-to.herokuapp.com/tasks";
   const toast = useToast();
 
   const changeStatus = () => {

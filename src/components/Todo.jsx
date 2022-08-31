@@ -6,20 +6,20 @@ import Header from "./Header";
 import BtnFilter from "./BtnFilter";
 import BtnAddTask from "./BtnAddTask";
 import axios from "axios";
-const port = process.env.REACT_APP_PORT;
+// const port = process.env.REACT_APP_PORT;
 
-const api = "http://localhost:5000/tasks";
-// const devEnv = process.env.NODE_ENV !== "production";
-// const {REACT_APP_DEV_URL,REACT_APP_PROD_URL} = process.env
+const api = "https://fake-api-to.herokuapp.com/tasks";
+
 function Todo() {
   const [items, setItems] = useState([]);
   const [addTodo, setAddTodo] = useState("");
   const toast = useToast();
-  console.log(port)
+  // console.log(port)
   // console.log(devEnv)
 
   useEffect(() => {
     axios.get(api).then((res) => {
+      console.log(res.data)
       setItems(res.data);
     });
   }, [addTodo]);
@@ -40,7 +40,6 @@ function Todo() {
     axios.delete(`${api}/${id}`).then(() => {
       toast({
         title: "Delete Success",
-        // description: "Fill all the form",
         status: "success",
         duration: 3000,
         isClosable: true,
@@ -53,7 +52,7 @@ function Todo() {
     });
   };
 
-  console.log(items);
+  // console.log(items);
 
   const renderTodoItems = () => {
     return items.map((val) => {
