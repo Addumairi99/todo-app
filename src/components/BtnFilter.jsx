@@ -1,19 +1,16 @@
 // import React from "react";
-import React, { useRef, useState } from "react";
+import React from "react";
 import {
   Button,
-  Container,
-  Flex,
-  Spacer,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import { ChevronDownIcon, AddIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 
 function BtnFilter() {
-  const [test, setTest] = useState("All");
+  // const [test, setTest] = useState("All");
   return (
     <Menu>
       <MenuButton
@@ -22,11 +19,12 @@ function BtnFilter() {
         rightIcon={<ChevronDownIcon />}
         defaultValue={"haha"}
       >
-        {test}
+        All
       </MenuButton>
       <MenuList>
         {/* <MenuItem onClick={set('All')}>All</MenuItem> */}
         <MenuItem>Complate</MenuItem>
+        <MenuItem>Iomplate</MenuItem>
         {/* <MenuItem onClick={set('Incomplate')}>Incomplate</MenuItem> */}
       </MenuList>
     </Menu>

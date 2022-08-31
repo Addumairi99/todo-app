@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useToast, Button, Container, Flex, Spacer } from "@chakra-ui/react";
+import { useToast,  Container, Flex, Spacer } from "@chakra-ui/react";
 
 import TodoItems from "./TodoItems";
 import Header from "./Header";

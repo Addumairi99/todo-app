@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, {  useState } from "react";
 import {
   FormLabel,
   Select,
@@ -40,7 +40,6 @@ function TodoItems(props) {
   const [editDescription, seEditDescription] = useState(
     props.items.description
   );
-  const [status, setStatus] = useState(props.items.status);
   const api = "http://localhost:5000/tasks";
   const toast = useToast();
 

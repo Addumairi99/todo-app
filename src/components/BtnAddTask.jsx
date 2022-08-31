@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import {
   FormLabel,
   Select,
@@ -10,7 +10,6 @@ import {
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   Input,
   Stack,
   Box,
@@ -20,7 +19,7 @@ import { AddIcon } from "@chakra-ui/icons";
 
 import axios from "axios";
 
-function BtnAddTask({ addTask, addTodo, setAddTodo }) {
+function BtnAddTask({ setAddTodo }) {
   const toast = useToast();
   const [modalOpen, setModalOpen] = useState(false);
   const [task, setTask] = useState("");
@@ -30,9 +29,7 @@ function BtnAddTask({ addTask, addTodo, setAddTodo }) {
   console.log(task);
   const url = "http://localhost:5000/tasks";
 
-  const changeStatus = (newStatus) => {
-    setStatus(newStatus);
-  };
+ 
 
   const addNewTask = () => {
     if (!task) {
